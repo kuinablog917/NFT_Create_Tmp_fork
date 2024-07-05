@@ -104,44 +104,44 @@ const Home: NextPage = () => {
       }
     };
     return <>
-    <div className="bg-black pb-16 flex flex-wrap buttom justify-center">
-      <div className='px-8 pt-8 lg:px-28 lg:py-28'>
-        <Image className="min-w-full" src="/main_grap.png" alt="Main Image" width={500} height={500}/>
-      </div>
-      <div className="m-12 lg:m-32 px-12 py-6 lg:pt-8 lg:px-20 border-2 bg-black text-center border-[#FFFFFF] bg-center bg-contain bg-no-repeat">
-        <h1 className="text-2xl lg:text-4xl pt-2 lg:pt-4 lg:pb-6 text-white font-['Impact']">MASAO</h1>
-        <h1 className="text-2xl lg:text-4xl pt-2 lg:pt-4 lg:pb-6 text-white font-['Impact']"> {mintNum} / 5000</h1>
-        <a className="text-2xl lg:text-4xl pt-2 lg:pt-8 lg:pb-8 text-white font-['Impact']">5</a><a className="text-2xl lg:text-3xl pt-2 lg:pt-8 lg:pb-8 text-[#99CDDB] font-['Impact'] ">MAX</a><br/>
-        
-        <div className="pt-2 lg:pt-6 pb-7">
-          <button type="button" className="text-2xl lg:text-3xl inline-flex flex-shrink-0 justify-center items-center gap-2 h-[1.375rem] w-[1.375rem] lg:h-[2.375rem] lg:w-[2.375rem]
-          border-[#FFFFFF] border-transparent font-['Impact'] bg-[#99CDDB] text-[#FFFFFF] hover:text-[#99CDDB] hover:bg-[#FFFFFF] focus:outline-none focus:ring-2
-          focus:ring-[#99CDDB] focus:ring-offset-2 transition-all  rounded-full dark:focus:ring-offset-gray-800" onClick={mintQuantityMinus}>
-          -</button>
-          <a className="text-2xl lg:text-3xl px-8 lg:pt-6 lg:pb-6 text-white font-['Impact']">{mintQuantity}</a>
-          <button type="button" className="text-2xl lg:text-3xl inline-flex flex-shrink-0 justify-center items-center gap-2 h-[1.375rem] w-[1.375rem] lg:h-[2.375rem] lg:w-[2.375rem]
-          border-[#FFFFFF] border-transparent rounded-full font-['Impact'] bg-[#99CDDB] text-[#FFFFFF] hover:text-[#99CDDB] hover:bg-[#FFFFFF] 
-          focus:outline-none focus:ring-2 focus:ring-[#99CDDB] focus:ring-offset-2 transition-all dark:focus:ring-offset-gray-800" onClick={mintQuantityPlus}>
-          +</button><br/>
-        </div>
-        { (!disabledFlag) && <button type="button" className="text-xl lg:text-2xl py-1 lg:py-3 px-12 lg:px-24 inline-flex justify-center items-center gap-2 rounded-full border border-transparent
-        bg-[#FFFFFF] border-yellow-200 font-['Impact'] text-[#99CDDB] hover:yellow-500 hover:bg-[#99CDDB] hover:text-[#FFFFFF] hover:border-[#FFFFFF]
-          focus:outline-none focus:ring-2 focus:ring-yellow-200 focus:ring-offset-2 transition-all dark:focus:ring-offset-gray-800" onClick={() => addChain()}>
-        CONNECT WALLET</button>}
-        { (disabledFlag) && <button type="button" className="text-xl lg:text-2xl py-1 lg:py-3 px-12 lg:px-24 inline-flex justify-center items-center gap-2 rounded-full border border-transparent
-        bg-[#FFFFFF] border-yellow-200 font-['Impact'] text-[#99CDDB] hover:yellow-500 hover:bg-[#99CDDB] hover:text-[#FFFFFF] hover:border-[#FFFFFF]
-          focus:outline-none focus:ring-2 focus:ring-yellow-200 focus:ring-offset-2 transition-all dark:focus:ring-offset-gray-800" onClick={() => nftMint()}>
-        MINT NOW</button>}
-      </div>
+    <div className="bg-gradient-to-b from-pink-200 to-purple-300 pb-16 flex flex-wrap justify-center items-center min-h-screen">
+  <div className='px-8 pt-8 lg:px-28 lg:py-28 animate-bounce'>
+    <Image className="rounded-full shadow-lg border-4 border-white" src="/main_grap.png" alt="Main Image" width={500} height={500}/>
+  </div>
+  <div className="m-12 lg:m-32 px-12 py-6 lg:pt-8 lg:px-20 border-4 rounded-3xl bg-white text-center border-pink-300 shadow-xl transform hover:scale-105 transition-transform duration-300">
+    <h1 className="text-3xl lg:text-5xl pt-2 lg:pt-4 lg:pb-6 text-pink-500 font-bold font-['Comic Sans MS', 'Chalkboard SE', 'sans-serif']">MASAO</h1>
+    <h1 className="text-2xl lg:text-4xl pt-2 lg:pt-4 lg:pb-6 text-purple-500 font-bold font-['Comic Sans MS', 'Chalkboard SE', 'sans-serif']"> {mintNum} / 5000</h1>
+    <a className="text-2xl lg:text-4xl pt-2 lg:pt-8 lg:pb-8 text-pink-500 font-bold">5</a><a className="text-2xl lg:text-3xl pt-2 lg:pt-8 lg:pb-8 text-purple-400 font-bold">MAX</a><br/>
+    
+    <div className="pt-2 lg:pt-6 pb-7">
+      <button type="button" className="text-2xl lg:text-3xl inline-flex flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] lg:h-[3.375rem] lg:w-[3.375rem]
+      border-pink-300 border-2 font-bold bg-white text-pink-500 hover:bg-pink-100 focus:outline-none focus:ring-2
+      focus:ring-pink-300 focus:ring-offset-2 transition-all rounded-full shadow-md" onClick={mintQuantityMinus}>
+      -</button>
+      <a className="text-2xl lg:text-3xl px-8 lg:pt-6 lg:pb-6 text-purple-500 font-bold">{mintQuantity}</a>
+      <button type="button" className="text-2xl lg:text-3xl inline-flex flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] lg:h-[3.375rem] lg:w-[3.375rem]
+      border-pink-300 border-2 rounded-full font-bold bg-white text-pink-500 hover:bg-pink-100 
+      focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-offset-2 transition-all shadow-md" onClick={mintQuantityPlus}>
+      +</button><br/>
     </div>
+    { (!disabledFlag) && <button type="button" className="text-xl lg:text-2xl py-2 lg:py-4 px-12 lg:px-24 inline-flex justify-center items-center gap-2 rounded-full border-2
+    bg-gradient-to-r from-pink-400 to-purple-400 border-white font-bold text-white hover:from-pink-500 hover:to-purple-500
+      focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-offset-2 transition-all shadow-lg animate-pulse" onClick={() => addChain()}>
+    CONNECT WALLET</button>}
+    { (disabledFlag) && <button type="button" className="text-xl lg:text-2xl py-2 lg:py-4 px-12 lg:px-24 inline-flex justify-center items-center gap-2 rounded-full border-2
+    bg-gradient-to-r from-pink-400 to-purple-400 border-white font-bold text-white hover:from-pink-500 hover:to-purple-500
+      focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-offset-2 transition-all shadow-lg animate-pulse" onClick={() => nftMint()}>
+    MINT NOW</button>}
+  </div>
+</div>
     </>
   }
 
   return (
     <div>
       <Seo
-          pageTitle={'ETH MASKS'}
-          pageDescription={'ETH MASKS'}
+          pageTitle={'MASAO'}
+          pageDescription={'MASAO'}
           pageImg={''}
           pageImgWidth={1920}
           pageImgHeight={1005}
